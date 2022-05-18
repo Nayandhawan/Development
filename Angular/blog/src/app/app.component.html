@@ -1,0 +1,240 @@
+<!-- <!--Interpolation-->
+<!--How to access data from ts file-->
+<!--
+<h1>Hello World</h1>
+<h1>{{author}}</h1>
+<h1>{{getName()}}</h1>
+<h1>{{obj.name}}</h1>
+<h1>{{obj.age}}</h1>
+<h1>{{arr}}</h1>
+<h1>{{arr.length}}</h1>
+<h1>{{arr[3]}}</h1>
+<h2>{{SiteUrl}}</h2>-->
+
+<!--Component-->
+<!--
+<app-user-list></app-user-list>
+<app-login></app-login>
+<app-signup></app-signup>
+<button (click)="getSurname('Nayan')">get my surname</button>
+<br>-->
+
+
+<!--Events-->
+<!--
+<button (click)="myEvent('This is click event')">Click me</button>
+<br>
+<input type="text" #box placeholder="Enter Text"(keyup.space)="keyup(box.value)"/>
+<br>
+<input type="text" #box placeholder="Enter Text"(keydown.Enter)="keydown(box.value)"/>
+<br>
+<input type="text" #box placeholder="Enter Text" ((blur)="myEvent('Hello')"/>
+<br>
+<br>
+<div 
+(mousewheel)="myEvent('Mouse Wheel')"
+style="background-color: aqua;">
+Mouse Event
+</div>
+-->
+
+<!--Get Textbox value-->
+<!--input type="text" (keyup)="getVal($any($event.target).value)"/-->
+<!-- <input type="text" #box /> 
+<button (click)="getVal(box.value)">get val</button>
+<h2>{{currentVal}}</h2>
+ -->
+
+<!--Property binding in angular
+Property bindingf can handle this disabled feature but interpolation cannot-->
+<!-- <input type="text" [disabled]="disabledBox" [value]="name"/>
+<br><br>
+<!--Interpolation-->
+<!-- <input type="text" disabled="{{disabledBox}}" value={{name}}>
+<br><br>
+<button (click)="enableBox()">Enable textbox</button> --> 
+
+<!--Conditions in Angular
+    Make IF Condition
+    Make IF else Condition
+    Make condition with string
+    Make elseif Condition
+    Make Condition with property binding
+    -->
+
+<!--If Condition & Else-->
+
+<!-- <h2>Condition in Angular</h2>
+<h2 *ngIf="show else elseBlock">
+    If Block
+</h2>
+<ng-template #elseBlock>
+    Else block
+</ng-template>
+<br><br> -->
+<!--String Condition-->
+<!-- <h2 *ngIf="nshow=='1234'; then ifBlock else elseBlock">
+</h2>
+<ng-template #ifBlock>
+    if  block 
+</ng-template>
+<ng-template #elseBlock>
+    Else block
+</ng-template> -->
+
+<!-- Else If -->
+<!-- <ng-template [ngIf]="nshow=='red'">
+    <h2>Red</h2>
+</ng-template>
+<ng-template [ngIf]="nshow=='green'">
+    <h2>green</h2>
+</ng-template>
+<ng-template [ngIf]="nshow=='blue'">
+    <h2>blue</h2>
+</ng-template>
+ -->
+
+<!-- <h4 class="ui horizontal divider header">
+ Current choice is {{ choice }}
+    </h4>
+    
+    <div class="ui raised segment">
+     <ul [ngSwitch]="choice">
+    <li *ngSwitchCase="1">First choice</li>
+    <li *ngSwitchCase="2">Second choice</li>
+    <li *ngSwitchCase="3">Third choice</li>
+     <li *ngSwitchCase="4">Fourth choice</li>
+     <li *ngSwitchCase="2">Second choice, again</li>
+     <li *ngSwitchDefault>Default choice</li>
+     </ul>
+     </div>
+    
+     <div style="margin-top: 20px;">
+     <button class="ui primary button" (click)="nextChoice()">
+     Next choice
+     </button>
+     </div> -->
+    <!--Switch case in Angular
+        Make a property color
+        show data accprding to color name
+    -->
+<!--     <h1>Switch case in Angular</h1>
+    <div [ngSwitch]="color">
+        <h2 style="color: red;" *ngSwitchCase="'red'">Color is red</h2>
+        <h2 style="color: blue;" *ngSwitchCase="'blue'">Color is blue</h2>
+        <h2 style="color: green;" *ngSwitchCase="'green'">Color is green</h2>
+        <h2 style="color: orange;" *ngSwitchCase="'orange'">Color is orange</h2>
+    </div> -->
+   <!-- <div style="margin-top: 20px;">
+    <button (click)="Choice()">Click</button>
+</div>-->
+<!--For Loop in Angular-->
+<!-- Make an Array
+apply for loop with it with html table 
+make a array with object
+apply for loop with it in html table -->
+<!-- <h4 *ngFor="let item of data">
+    {{item}}
+</h4> -->
+
+
+<!-- If this is the scenario then [[object object will print because
+     in this there is multiple array oject not a single name]]
+    <h2 *ngFor="let item1 of data1">
+    {{item1}}
+</h2> -->
+<!-- ************************
+    So this is not looking correct that's why we are using a new form.
+    Now we will use table
+<h2 *ngFor="let item1 of data1">
+    {{item1.name}}
+    {{item1.age}}
+</h2>
+output: 
+nayan 25
+sam 26 -->
+
+<!-- <table border="5" style="border-radius: 15px;background-origin: padding-box;box-shadow: 5px;border-color: olive;">
+    <tr>
+        <td>Name</td>
+        <td>age</td>
+        <td>color</td>
+    </tr>
+    <tr  *ngFor="let item1 of data1">
+        <td>{{item1.name}}</td>
+        <td>{{item1.age}}</td>
+        <td>{{item1.color}}</td>
+    </tr>
+</table> -->
+<!--Forms In Angular
+Make a simple form
+Import form module in a module file
+Make a form
+Make function and get form value-->
+<!-- <h1>Make An Angular Forms</h1>
+<form #simpleForm="ngForm"(ngSubmit)="getUserValue(simpleForm.value)">
+    <input type="text" ngModel name="username" placeholder="NAME"><br><br>
+    <input type="password" ngModel name="pass" placeholder="Password"><br><br>
+    <input type="email" ngModel name="email" placeholder="Email"><br><br>
+    <button>Submit</button>
+</form>  -->
+
+<!--How to make header and footer component
+Make header and footer in angular
+Create header component
+Create footer component
+Use both component
+Add style-->
+<!-- 1:42 -->
+<!-- <app-header></app-header>
+<p>Make Header And Footer in Angular</p>
+<app-footer ></app-footer> -->
+
+<!-- Style binding in angular
+difference between normal style and style binding
+add dynamic style
+update style with button click
+add conditional style -->
+
+
+<!-- <h1 style="color: red;">Header</h1>
+<h1 [style.color]="'green'">Header</h1>
+<h1 [style.color]="err?'red':'green'">conditional Header</h1>
+<h1 [style.backgroundColor]="'green'"> Header</h1>-->
+
+<!--Dynamic style -->
+
+<!-- <h1 [style.backgroundColor]="color">Header</h1>
+<button (click)="updateColor()">Update color</button>  -->
+
+
+<!-- how to add bootstrap in angular -->
+<!-- run command for install bootstrap
+try with some bootstrap examples
+we check and use code from official website of ng-bootstrap
+
+ng add @ng-bootstrap/ng-bootstrap -->
+<!-- <h1>Bootstrap Component</h1>
+<p>
+    <ngb-alert [dismissible]="false">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </ngb-alert>
+  </p>
+
+  <p *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+  </p>
+  <p>
+    <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+  </p>
+   -->
+
+
+<!--    Add Material in angular 10
+   what is material UI
+   install material - ng add @angular/material
+   select some when while installing material
+   use some component with example 
+   such as slider and button
+
+    -->2:3
