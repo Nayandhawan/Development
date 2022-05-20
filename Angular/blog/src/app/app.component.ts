@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-interface Alert {
+/* interface Alert {
   type: string;
   message: string;
 }
@@ -30,7 +30,7 @@ const ALERTS: Alert[] = [{
     message: 'This is a dark alert',
   }
 ];
-
+ */
 
 @Component({
   selector: 'app-root',
@@ -41,7 +41,18 @@ export class AppComponent {
   //Interpolation
   title = 'blog';
   author = 'Nayan';
-  alerts: Alert[];
+  data=[
+    {
+      name:'nayan dhawan',
+      age:23
+    },
+    {
+      name: 'aditi agrawal',
+      age:23
+    }
+  ]
+ 
+/*   alerts: Alert[];
 
   constructor() {
     this.reset();
@@ -53,7 +64,7 @@ export class AppComponent {
 
   reset() {
     this.alerts = Array.from(ALERTS);
-  }
+  } */
 /*   myEvent(event){
       console.log(event)
   }

@@ -237,4 +237,33 @@ ng add @ng-bootstrap/ng-bootstrap -->
    use some component with example 
    such as slider and button
 
-    -->2:3
+    -->
+<!--     <h1>Angular Material button</h1>
+    <button mat-button>Submit</button>
+    <button mat-button color="accent">Accent</button>
+    <button mat-button color="warn">Warn</button>
+    <button mat-button disabled>Disabled</button><br>
+    <mat-slider min="1" max="10" step="2"></mat-slider>
+ -->
+
+<!--  Pass Data Parent to Child Component in Angular  -->
+ <!--        Make User component
+        Make it child of app component 
+        Pass data from app to child component 
+        Display data in child component  -->
+<!-- 
+
+ <h1> Pass Data Parent to Child Component in Angular </h1>
+ <app-users [hero]="data"></app-users>
+
+  -->
+
+<!--   Reusable component in Angular 
+    Make a user component 
+    Use it inside app component as child 
+    Pass data from parent to child 
+    Use for loop and result child component 
+     -->
+<div *ngFor="let users of data">
+    <app-users [hero]="users"></app-users>
+</div>
